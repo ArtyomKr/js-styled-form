@@ -11,6 +11,8 @@ $secondary-color: #efcdcd;
 $font-color: #383838;
 $font-color-light: #fcfcfc;
 
+$shadow: 2px 2px 1px #6b6b6b;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -70,6 +72,7 @@ body {
   flex-direction: column;
   border-radius: 5px;
   background-color: $secondary-color;
+  box-shadow: $shadow;
 
   &__header {
     padding-bottom: 20px;
@@ -83,7 +86,16 @@ body {
     font-size: 1.2em
   }
 
-  &__input {
+  &__input, &__textarea {
     height: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: $shadow;
+  }
+
+  &__textarea {
+    border-radius: 5px;
   }
 }
