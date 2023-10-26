@@ -5,8 +5,37 @@
         <title>Webpack App</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Styled form</h1>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <div class="main__content">
+                    <form class="form">
+                        <h2 class="form__header">Form</h2>
+                        <label class="form__label">
+                            Name:
+                            <input class="form__input" type="text" placeholder="Enter your name"/>
+                        </label>
+                        <label class="form__label">
+                            Email:
+                            <input class="form__input" type="email" placeholder="Enter your email"/>
+                        </label>
+                        <label class="form__label">
+                            Number:
+                            <input class="form__input" type="tel" placeholder="Enter your phone number"/>
+                        </label>
+                        <label class="form__label">
+                            Message:
+                            <textarea class="form__textarea" placeholder="Enter your message"> </textarea>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </main>
     </body>
-    
 </html>
