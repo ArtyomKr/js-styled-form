@@ -91,7 +91,7 @@ body {
   margin-bottom: 10px;
 
   &:focus-within {
-    .textfield__input {
+    .textfield__input, .textfield__textarea {
       background-color: $input-color-dark;
     }
 
