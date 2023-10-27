@@ -17,6 +17,7 @@ $font-color-light: #fcfcfc;
 $input-placeholder-color: #aaaeb1;
 $error-color: #f37d77;
 $bg-error-color: #fbf5f6;
+$bg-transparent: #00000066;
 
 $border: 1px solid var(--Grey, #dde2e5);
 
@@ -69,6 +70,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  &-noscroll {
+    overflow:hidden;
   }
 }
 
@@ -162,5 +167,53 @@ body {
 
   &:active {
     background-color: $secondary-color-dark;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: $bg-transparent;
+
+  @keyframes appearleft {
+    from {left: -600px; opacity: 0}
+    to {left: 0; opacity: 1}
+  }
+
+  &__content {
+    position: relative;
+    padding: 20px;
+    margin: 20vh auto;
+    border: $border;
+    border-radius: 20px;
+    max-width: 600px;
+    background-color: $bg-color-light;
+    animation-name: appearleft;
+    animation-duration: 0.5s
+  }
+
+  &__header {
+    padding-bottom: 20px;
+  }
+
+  &__close {
+    color: $secondary-color;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 28px;
+
+    &:hover,
+    &:focus {
+      color: $secondary-color-dark;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
