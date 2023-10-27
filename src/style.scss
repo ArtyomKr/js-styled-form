@@ -5,13 +5,20 @@
 
 $header-height: 60px;
 
-$bg-color: #d0d0d0;
-$primary-color: #4a3f4d;
-$secondary-color: #efcdcd;
+$bg-color: #f7f7fb;
+$bg-color-light: #fff;
+$primary-color: #2364AA;
+$secondary-color: #f2bc02;
+$secondary-color-dark: #e0ae01;
+$input-color: #f4f4fa;
+$input-color-dark: #eaecf8;
 $font-color: #383838;
 $font-color-light: #fcfcfc;
+$input-placeholder-color: #aaaeb1;
+$error-color: #f37d77;
+$bg-error-color: #fbf5f6;
 
-$shadow: 2px 2px 1px #6b6b6b;
+$border: 1px solid var(--Grey, #dde2e5);
 
 * {
   box-sizing: border-box;
@@ -67,35 +74,93 @@ body {
 
 .form {
   min-width: 300px;
-  padding: 10px;
+  padding: 30px 25px;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
-  background-color: $secondary-color;
-  box-shadow: $shadow;
+  border-radius: 20px;
+  border: $border;
+  background-color: $bg-color-light;
 
   &__header {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.textfield {
+  position: relative;
+  margin-bottom: 10px;
+
+  &:focus-within {
+    .textfield__input {
+      background-color: $input-color-dark;
+    }
+
+    .textfield__label {
+      color: $primary-color;
+    }
   }
 
   &__label {
-    padding-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2em
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 0.8em;
   }
 
   &__input, &__textarea {
-    height: 100%;
-    padding: 5px;
-    border-radius: 3px;
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    padding: 28px 16px 8px 16px;
+    border-radius: 8px;
     outline: none;
     border: none;
-    box-shadow: $shadow;
+    background-color: $input-color;
+    font-size: 1em;
+
+    &::placeholder {
+      font-size: 1rem;
+      color: $input-placeholder-color;
+    }
   }
 
   &__textarea {
-    border-radius: 5px;
+    max-width: 400px;
+    min-width: 200px;
+    max-height: 400px;
+    min-height: 70px;
+  }
+
+  &__error-text {
+    color: $error-color;
+    visibility: hidden;
+    font-size: 0.8em;
+  }
+
+  &-error {
+    .textfield__label {
+      color: $error-color;
+    }
+
+    .textfield__input, .textfield__textarea {
+      background-color: $bg-error-color;
+    }
+
+    .textfield__error-text {
+      visibility: visible;
+    }
+  }
+}
+
+.button {
+  padding: 15px;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.5em;
+
+  &:active {
+    background-color: $secondary-color-dark;
   }
 }
