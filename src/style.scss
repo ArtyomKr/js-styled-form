@@ -16,6 +16,7 @@ $font-color: #383838;
 $font-color-light: #fcfcfc;
 $input-placeholder-color: #aaaeb1;
 $error-color: #f37d77;
+$success-color: #66cc67;
 $bg-error-color: #fbf5f6;
 $bg-transparent: #00000066;
 
@@ -88,6 +89,22 @@ body {
 
   &__header {
     padding-bottom: 40px;
+  }
+
+  &__message {
+    display: none;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+
+    &-success {
+      display: block;
+      color: $success-color;
+    }
+
+    &-error {
+      display: block;
+      color: $error-color;
+    }
   }
 }
 
