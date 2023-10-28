@@ -5,8 +5,60 @@
         <title>Webpack App</title>
     </head>
     <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Styled form</h1>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <div class="main__content">
+                    <form class="form">
+                        <h2 class="form__header">Create an account</h2>
+
+                        <div class="textfield">
+                            <label class="textfield__label" for="name">Name:</label>
+                            <input class="textfield__input" id="name" type="text" placeholder="Enter your name" name="name"/>
+                            <p class="textfield__error-text">Text error</p>
+                        </div>
+
+                        <div class="textfield">
+                            <label class="textfield__label" for="email">Email:</label>
+                            <input class="textfield__input" id="email" type="email" placeholder="Enter your name" name="email"/>
+                            <p class="textfield__error-text">Text error</p>
+                        </div>
+
+                        <div class="textfield">
+                            <label class="textfield__label" for="number">Number:</label>
+                            <input class="textfield__input" id="number" type="text" placeholder="Enter your phone number" name="number"/>
+                            <p class="textfield__error-text">Text error</p>
+                        </div>
+
+                        <div class="textfield">
+                            <label class="textfield__label" for="message">Message:</label>
+                            <textarea class="textfield__textarea" id="message" placeholder="Enter your message" name="message"></textarea>
+                            <p class="textfield__error-text">Text error</p>
+                        </div>
+
+                        <button class="button" type="submit">Submit</button>
+                    </form>
+
+                    <div class="modal">
+                        <div class="modal__content">
+                            <div class="modal__header">
+                                <span class="modal__close">&times;</span>
+                                <h3>Modal title</h3>
+                            </div>
+                            <div class="modal__body">
+                                <p>This is a modal window</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
     </body>
-    
 </html>
