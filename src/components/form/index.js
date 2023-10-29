@@ -39,11 +39,10 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   toggleSubmitButton();
   if (validateRegistrationForm(e.target)) {
-    const res = await sendForm(form);
-    const message = await res.json();
+    const message = await sendForm(form);
 
     if (message.status !== 'success' && message.fields) displayValErrors(message.fields, form);
-    else clearForm();
+    else if (message.status === 'success') clearForm();
     displayFormMsg(message.status, message.message);
   } else clearFormMsg();
   toggleSubmitButton();
