@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>Webpack App</title>
     </head>
-    <body>
+    <body class="body">
         <header class="header">
             <div class="container">
                 <div class="header__content">
@@ -17,35 +17,30 @@
                 <div class="main__content">
                     <form class="form" name="feedbackForm">
                         <h2 class="form__header">Submit your feedback</h2>
-
                         <div class="textfield">
                             <label class="textfield__label" for="name">Name:</label>
                             <input class="textfield__input" id="name" type="text" placeholder="Enter your name" name="name"/>
                             <p class="textfield__error-text">Text error</p>
                         </div>
-
                         <div class="textfield">
                             <label class="textfield__label" for="email">Email:</label>
                             <input class="textfield__input" id="email" type="text" placeholder="Enter your email" name="email"/>
                             <p class="textfield__error-text">Text error</p>
                         </div>
-
                         <div class="textfield">
                             <label class="textfield__label" for="number">Number:</label>
                             <input class="textfield__input" id="number" type="text" placeholder="Enter your phone number" name="number"/>
                             <p class="textfield__error-text">Text error</p>
                         </div>
-
                         <div class="textfield">
                             <label class="textfield__label" for="message">Message:</label>
                             <textarea class="textfield__textarea" id="message" placeholder="Enter your message" name="message"></textarea>
                             <p class="textfield__error-text">Text error</p>
                         </div>
-
                         <p class="form__message">Text message</p>
                         <button class="button" type="submit" autocomplete="off">Submit</button>
+                        <button class="button-modal button" type="button">Open modal</button>
                     </form>
-
                     <div class="modal">
                         <div class="modal__content">
                             <div class="modal__header">
@@ -57,7 +52,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </main>
