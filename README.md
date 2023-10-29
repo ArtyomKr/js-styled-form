@@ -1,5 +1,5 @@
 ## Notes
-I modified server.js to add server validation error to one of the fields. See the following commit: 6686115
+I modified server.js to add server validation error to one of the fields. See this [commit](https://github.com/ArtyomKr/js-styled-form/commit/66861153d4783f5f574a015bfeb37a3811105bbc)
 
 # Installation
 
