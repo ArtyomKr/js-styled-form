@@ -1,1 +1,3 @@
-console.log("Hello World!")
+import './style.scss';
+import './components/form';
+import './components/modal';
