@@ -14,6 +14,9 @@ app.post("/api/registration", (req, res) => {
       res.send({
         status: "error",
         message: "Bad request",
+        fields: {
+          name: "Name already registered"
+        },
       });
     }, Math.random() * 1000);
 
