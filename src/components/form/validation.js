@@ -10,7 +10,13 @@ function clearValErr(input) {
   textfield.classList.remove('textfield-error');
 }
 
-export function validateFeedbackForm(form) {
+export function displayValErrors(errorsObj, form) {
+  Object.entries(errorsObj).forEach(([fieldName, errorText]) => {
+    if (form.elements[fieldName]) displayValErr(form.elements[fieldName], errorText);
+  });
+}
+
+export function validateRegistrationForm(form) {
   let isValid = true;
 
   Array.from(form.elements).forEach((elem) => {
