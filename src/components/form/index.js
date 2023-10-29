@@ -2,7 +2,7 @@ import IMask from 'imask';
 import { displayValErrors, validateRegistrationForm } from './validation';
 import sendForm from './sendForm';
 
-const form = document.forms.feedbackForm;
+const form = document.forms.registrationForm;
 const numberInput = form.elements.number;
 const mask = IMask(numberInput, {
   mask: '+{375} (00) 000-00-00',
