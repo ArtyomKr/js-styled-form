@@ -185,6 +185,11 @@ body {
   &:active {
     background-color: $secondary-color-dark;
   }
+
+  &:disabled {
+    cursor: wait;
+    background-color: $bg-color;
+  }
 }
 
 .modal {
