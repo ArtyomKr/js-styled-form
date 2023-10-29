@@ -1,13 +1,13 @@
 function displayValErr(input, text) {
   const textfield = input.closest('.textfield');
   const errorText = textfield.querySelector('.textfield__error-text');
-  textfield.classList.add('textfield-error');
+  textfield.classList.add('textfield_error');
   errorText.innerHTML = text;
 }
 
 function clearValErr(input) {
   const textfield = input.closest('.textfield');
-  textfield.classList.remove('textfield-error');
+  textfield.classList.remove('textfield_error');
 }
 
 export function displayValErrors(errorsObj, form) {

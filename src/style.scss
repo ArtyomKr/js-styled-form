@@ -34,9 +34,13 @@ html {
   height: 100%;
 }
 
-body {
+.body {
   height: 100%;
   background-color: $bg-color;
+
+  &_noscroll {
+    overflow:hidden;
+  }
 }
 
 .container {
@@ -72,10 +76,6 @@ body {
     justify-content: center;
     align-items: center;
   }
-
-  &-noscroll {
-    overflow:hidden;
-  }
 }
 
 .form {
@@ -96,12 +96,12 @@ body {
     padding-bottom: 10px;
     font-size: 1.2em;
 
-    &-success {
+    &_success {
       display: block;
       color: $success-color;
     }
 
-    &-error {
+    &_error {
       display: block;
       color: $error-color;
     }
@@ -159,7 +159,7 @@ body {
     font-size: 0.8em;
   }
 
-  &-error {
+  &_error {
     .textfield__label {
       color: $error-color;
     }

@@ -12,14 +12,14 @@ const mask = IMask(numberInput, {
 function displayFormMsg(status, msg) {
   const formMessage = form.querySelector('.form__message');
   formMessage.innerHTML = msg;
-  if (status === 'success') formMessage.classList.add('form__message-success');
-  else formMessage.classList.add('form__message-error');
+  if (status === 'success') formMessage.classList.add('form__message_success');
+  else formMessage.classList.add('form__message_error');
 }
 
 function clearFormMsg() {
   const formMessage = form.querySelector('.form__message');
-  formMessage.classList.remove('form__message-error');
-  formMessage.classList.remove('form__message-success');
+  formMessage.classList.remove('form__message_error');
+  formMessage.classList.remove('form__message_success');
 }
 
 function clearForm() {
